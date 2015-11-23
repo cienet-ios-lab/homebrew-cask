@@ -11,8 +11,8 @@ cask :v1 => 'xcode' do
   app 'Xcode.app', target: '/Applications/Xcode.app'
 
   postflight do
-    system 'sudo', 'xcode-select', '-s /Applications/Xcode.app'
+    system 'sudo', 'xcode-select', '-s', '/Applications/Xcode.app'
     # Accept xcode license, see http://stackoverflow.com/a/33655684/622662
-    system 'sudo', 'xcodebuild', '-license accept'
+    system 'sudo', 'xcodebuild', '-license', 'accept'
   end
 end
