@@ -1,5 +1,3 @@
-# Copyright CIeNET Corp
-
 cask :v1 => 'xcode' do
   version '7.1'
   sha256 "eaceba597bf6a4acdfd04ea996777fd374c4adbbb79c9728692b132a9d471324"
