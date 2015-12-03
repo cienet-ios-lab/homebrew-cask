@@ -10,6 +10,9 @@ cask :v1 => 'xcode' do
 
   app 'Xcode.app', target: '/Applications/Xcode.app'
 
+  pkg 'Xcode.app/Contents/Resources/Packages/MobileDevice.pkg'
+  pkg 'Xcode.app/Contents/Resources/Packages/MobileDeviceDevelopment.pkg'
+
   postflight do
     system 'sudo', 'xcode-select', '-s', '/Applications/Xcode.app'
     # Accept xcode license, see http://stackoverflow.com/a/33655684/622662
